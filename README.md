@@ -1,16 +1,11 @@
 ![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU)
   
-  asd
-  [(https://github.com/Huski82)
-  (https://github.com/Huski82/HW-9-ReadME-Generator)
-  (undefined)
-  undefined
   
 
 
-# Generator Maker#[undefined 
+# Generator Maker$
 
-## Descriptionasd
+## Description
 
 This project is a command line application that automatically generates a professional README markdown file for a repository based on answers from the user. 
 When the application runs, it presents a series of prompts to the user to fill in sections in the README. 
