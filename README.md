@@ -2,8 +2,8 @@
   #[undefined 
   Generator Maker
   [Link](https://github.com/Huski82)
-  [Git Repository for the Application ](https://github.com/Huski82/HW-9-ReadME-Generator)
-  ![](undefined)
+  [Git Repository for the Application ]()
+  (undefined)
   undefined
   
 
@@ -31,7 +31,7 @@ Application Demonstration: [README Generator Demo]
   * [License](#License)
   
   ## Installation
-  undefined
+
   * Once the application is downloaded from git, change to the ./js directory
   * run "npm install" to install the required modules
   
@@ -42,7 +42,7 @@ Application Demonstration: [README Generator Demo]
   * User selects the sections they want to have in the README.md file
   * User is prompted for questions and when completed file will be generated in ../output directory. User can edit the file or open in preview of web browser to see the formatted output.
 
-    ![](undefined)
+  
   
   ## Technologies
   This was developed using a variety of technologies and resources all are open source.
