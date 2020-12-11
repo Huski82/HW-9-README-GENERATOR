@@ -46,13 +46,16 @@
   const generateHTML = (answers) =>
   
   `![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](${answers.appLogo})
-  # Generator Maker[${answers.appTitle} 
-  ## Description${answers.appDescription}
-  #[Link]https://github.com/Huski82(${answers.appLink})
-  ##[Git Repository for the Application ]https://github.com/Huski82/HW-9-ReadME-Generator(${answers.appGitRepo})
-
-  ## Installation${answers.appInstallInstructions}
+  #[${answers.appTitle} 
+  ${answers.appDescription}
+  [(${answers.appLink})
+  (${answers.appGitRepo})
+  (${answers.appGif})
+  ${answers.appInstallInstructions}
   
+
+
+# Generator Maker
 
 ## Description
 
@@ -75,7 +78,7 @@ Application Demonstration: [README Generator Demo]
   * [License](#License)
   
   ## Installation
-
+  
   * Once the application is downloaded from git, change to the ./js directory
   * run "npm install" to install the required modules
   
@@ -86,7 +89,7 @@ Application Demonstration: [README Generator Demo]
   * User selects the sections they want to have in the README.md file
   * User is prompted for questions and when completed file will be generated in ../output directory. User can edit the file or open in preview of web browser to see the formatted output.
 
-  
+    
   
   ## Technologies
   This was developed using a variety of technologies and resources all are open source.
@@ -108,6 +111,10 @@ Application Demonstration: [README Generator Demo]
     .then((answers) => writeFileAsync('README.md', generateHTML(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
+
+
+
+
 
 
 
