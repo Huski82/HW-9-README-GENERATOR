@@ -46,16 +46,11 @@
   const generateHTML = (answers) =>
   
   `![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](${answers.appLogo})
-  #[${answers.appTitle} 
-  ${answers.appDescription}
-  [(${answers.appLink})
-  (${answers.appGitRepo})
-  (${answers.appGif})
-  ${answers.appInstallInstructions}
+  
   
 
 
-# Generator Maker
+# Generator Maker$
 
 ## Description
 
