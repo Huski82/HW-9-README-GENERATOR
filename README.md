@@ -1,51 +1,4 @@
-
-  const inquirer = require('inquirer');
-  const fs = require('fs');
-  const util = require('util');
-  const writeFileAsync = util.promisify(fs.writeFile);
-  
-  const promptUser = () =>
-    inquirer.prompt([
-      {
-          type: 'input',
-          name: 'appDescription',
-          message: 'Application Name',
-        }, 
-        {
-          type: 'input',
-          name: 'appLogo',
-          message: 'Please add your application logo here:',
-        },
-        {
-          type: 'input',
-          name: 'appLink',
-          message: 'Input the url for your application: ',
-        },
-      {
-        type: 'input',
-        name: 'appGitRepo',
-        message: 'Input the github url for your application: ',
-      },
-      {
-        type: 'input',
-        name: 'usage',
-        message: 'What does the user need to know about using the repository?',
-      },
-      {
-        type: 'input',
-        name: 'contribute',
-        message: 'What does the user need to know about contributing to the repository?',
-      },
-      {
-          type: 'input',
-          name: 'appLink',
-          message: 'Link to Application',
-        },
-    ]);
-  //end of prompt
-  const generateHTML = (answers) =>
-  
-  `![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](${answers.appLogo})
+![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU]()
   
   
 
@@ -100,9 +53,4 @@ Application Demonstration: [README Generator Demo 1](https://drive.google.com/fi
   No testing is available at this time
   
   ## License
-  MIT`;
-  
-  promptUser()
-    .then((answers) => writeFileAsync('README.md', generateHTML(answers)))
-    .then(() => console.log('Successfully wrote to README.md'))
-    .catch((err) => console.error(err));
+  MIT
