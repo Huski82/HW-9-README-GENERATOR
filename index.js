@@ -46,16 +46,13 @@
   const generateHTML = (answers) =>
   
   `![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](${answers.appLogo})
-  #[${answers.appTitle} 
-  ${answers.appDescription}
-  [Link](${answers.appLink})
-  [Git Repository for the Application ](${answers.appGitRepo})
-  (${answers.appGif})
-  ${answers.appInstallInstructions}
+  # Generator Maker[${answers.appTitle} 
+  ## Description${answers.appDescription}
+  #[Link]https://github.com/Huski82(${answers.appLink})
+  ##[Git Repository for the Application ]https://github.com/Huski82/HW-9-ReadME-Generator(${answers.appGitRepo})
+
+  ## Installation${answers.appInstallInstructions}
   
-
-
-# Generator Maker
 
 ## Description
 
