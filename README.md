@@ -1,4 +1,51 @@
-![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU)
+
+  const inquirer = require('inquirer');
+  const fs = require('fs');
+  const util = require('util');
+  const writeFileAsync = util.promisify(fs.writeFile);
+  
+  const promptUser = () =>
+    inquirer.prompt([
+      {
+          type: 'input',
+          name: 'appDescription',
+          message: 'Application Name',
+        }, 
+        {
+          type: 'input',
+          name: 'appLogo',
+          message: 'Please add your application logo here:',
+        },
+        {
+          type: 'input',
+          name: 'appLink',
+          message: 'Input the url for your application: ',
+        },
+      {
+        type: 'input',
+        name: 'appGitRepo',
+        message: 'Input the github url for your application: ',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'What does the user need to know about using the repository?',
+      },
+      {
+        type: 'input',
+        name: 'contribute',
+        message: 'What does the user need to know about contributing to the repository?',
+      },
+      {
+          type: 'input',
+          name: 'appLink',
+          message: 'Link to Application',
+        },
+    ]);
+  //end of prompt
+  const generateHTML = (answers) =>
+  
+  `![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsuRnxauc5CtVxNv3CIKAPg43yDDlG-bLRA&usqp=CAU](${answers.appLogo})
   
   
 
@@ -13,7 +60,7 @@ Then the README markdown file with the user information is saved inside the outp
 
 ### Demonstration
 
-Application Demonstration: [README Generator Demo]
+Application Demonstration: [README Generator Demo 1](https://drive.google.com/file/d/1_mN0ZfchmOCtP0l5gLM39VWD_sE3TrR8/view) [README Generator Demo 2](https://drive.google.com/file/d/1sIn6Rf3fskcepG3NpaV1MqzJVGdX4NWr/view) 
 
 
 ## Table of contents
@@ -53,4 +100,9 @@ Application Demonstration: [README Generator Demo]
   No testing is available at this time
   
   ## License
-  MIT
+  MIT`;
+  
+  promptUser()
+    .then((answers) => writeFileAsync('README.md', generateHTML(answers)))
+    .then(() => console.log('Successfully wrote to README.md'))
+    .catch((err) => console.error(err));
